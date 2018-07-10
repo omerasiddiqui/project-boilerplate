@@ -28,7 +28,7 @@ app.init = () => {
         e.preventDefault();
         const name = nameInput.val();
         const price = priceInput.val();
-        const comboNum = numberInput.val();
+        var comboNum = parseInt(numberInput.val());
         const description = descriptionInput.val();
         const message = {
             comboNum,
@@ -46,7 +46,7 @@ app.init = () => {
         $('#descriptionInput').val("");
     });
 
-    app.menu.limitToLast(10).on('child_added', function(messages) {
+    app.menu.orderByChild("comboNum").on('child_added', function(messages) {
         const data = messages.val();
         const name = data.name;
         const comboNum = data.comboNum
