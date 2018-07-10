@@ -1,0 +1,106 @@
+header, main, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 3rem;
+    color: red;
+    text-shadow: 1px 1px 1px blue;
+    font-family: sans-serif;
+    text-align: center;
+}
+.messages {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+}
+
+.messages li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    border: 1px solid lightgrey;
+    padding: 2%;
+}
+
+.full {
+    width: 100%;
+}
+
+.quarter {
+    display: flex;
+    width: 25%;
+    font-size: 0.7rem;
+
+}
+
+.quarter:nth-of-type(2) {
+}
+
+.messagesWrap {
+    margin-top: 5%;
+    border: 2px solid red;
+}
+
+.menuList {
+    padding: 5%;
+}
+
+.menu {
+    width: 100%;
+}
+
+.desc {
+    font-size: 0.7rem;
+}
+
+form.menu {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.inputField {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=text] {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 50%;
+    padding: 10px 0;
+    background: lighten(green, 10);
+    color: white;
+    margin: auto auto;
+    margin-top: 2.5%;
+}
+
+li * {
+    margin: 0 20px;
+}

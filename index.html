@@ -5,19 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Omer Siddiqui</title>
+    <title>Sam's Menu</title>
 </head>
 <body>
     <!-- header starts here -->
     <header>
         <div class="wrapper">
-            
+            <h1>Sam's Menu</h1>
         </div>
     </header>
     <!-- header ends -->
     <!-- main starts here -->
     <main>
+    <div class="wrapper menuList">
+        <form action="" class="menu">
+                <div class="inputField">
+                        <label for="numberInput">Combo Number:</label>
+                        <input type='text' id='numberInput'  placeholder='ex: 1' required>
+                </div>
 
+                <div class="inputField">
+                        <label for="nameInput">Item Name:</label>
+                        <input type='text' id='nameInput' placeholder='ex: Gyro' required>
+                </div>
+
+                <div class="inputField">
+                        <label for="priceInput">Price:</label>
+                        <input type='text' id='priceInput'  placeholder='ex: 5.99' required>
+                </div>
+
+                <div class="inputField">
+                        <label for="description">Description:</label>
+                        <input type='text' id='descriptionInput'  placeholder='ex: juicy beef burger with fries'>
+                </div>
+
+                <input type="submit" value="Enter">
+            </form>
+            
+            <div class="messagesWrap">
+                    <ul class="messages"></ul>
+                </div>
+    </div>
     </main>
     <!-- main ends -->
     <!-- footer starts here -->
@@ -26,6 +54,15 @@
     </footer>
     <!-- footer ends -->
 
+    <!-- SCRIPTS -->
+    <!-- load fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <!-- load jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <!-- load firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!-- load script -->
     <script src="js/script.js"></script>
 </body>
 </html>

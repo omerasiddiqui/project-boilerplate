@@ -1,7 +1,6 @@
 {
-  "name": "project-boilerplate",
+  "name": "project-three",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.24.5",
@@ -14,5 +13,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Omer Siddiqui",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omerasiddiqui/project-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omerasiddiqui/project-boilerplate/issues"
+  },
+  "homepage": "https://github.com/omerasiddiqui/project-boilerplate#readme",
+  "description": ""
 }
