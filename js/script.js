@@ -29,7 +29,7 @@ app.init = () => {
         e.preventDefault();
         const name = nameInput.val();
         const price = priceInput.val();
-        var comboNum = parseInt(numberInput.val());
+        const comboNum = parseInt(numberInput.val());
         const description = descriptionInput.val();
         const category = categoryInput.val();
         const message = {
@@ -40,7 +40,7 @@ app.init = () => {
             category
         }
         // This is where we add the messages to firebase;
-        app.menu.push(message);
+        app.menu.update(message);
 
         // Empty input fields
         $('#nameInput').val("");
@@ -58,16 +58,16 @@ app.init = () => {
         const key = messages.key;
         const li = `<li class="full" id="key-${key}">
                     <div class="inputField">
-                            <input type='text' class="listInputFields" id='listNumberInput' value='${comboNum}'>
+                            <input type='text' class="listInputFields listNumberInput" value='${comboNum}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' class="listInputFields" id='listPriceInput' value='${name}'>
+                            <input type='text' class="listInputFields listPriceInput" value='${name}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' class="listInputFields" id='listNameInput' value='${price}'>
+                            <input type='text' class="listInputFields listNameInput" value='${price}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' class="listInputFields" id='listDescriptionInput' value='${description}'>
+                            <input type='text' class="listInputFields listDescriptionInput" value='${description}'>
                     </div>
                     <div class='quarter'>
                         <button class="delete" id="${key}"><i class="fas fa-trash-alt"></i>
@@ -75,7 +75,39 @@ app.init = () => {
                     </div>
                     </li>`;
                     messageList.append(li);
+                    updateFirebase(key)
+;
     })
+
+    // update firebase
+    var updateFirebase = function(key) {
+        console.log(key)
+        const nameInputs = $(`ul #key-${key} .listNameInput`);
+        const priceInputs = $(`ul #key-${key} .listPriceInput`);
+        const numberInputs = $('.listNumberInput');
+        const descriptionInputs = $('.listDescriptionInput');
+
+        const name = nameInputs.val();
+        const price = priceInputs.val();
+        const comboNum = parseInt(numberInputs.val());
+        const description = descriptionInputs.val();
+
+        console.log(name, price)
+
+        const data = {
+            name: name,
+            price: price,
+            comboNum: comboNum,
+            description: description
+        }
+
+        app.menu.update(data)
+        
+    }
+
+    $('#save').on("click", function(e){
+        updateFirebase();
+    });
 
     
 
@@ -95,47 +127,3 @@ $(function() {
     app.config();
     app.init();
 })
-
-// {
-//     id: 1,
-//     name: "Single Burger",
-//     description: "A delicious burger",
-//     price: "5.99"
-//   },
-//   {
-//     id: 2,
-//     name: "Double Burger",
-//     description: "A delicious burger with 2 patties",
-//     price: "6.99"
-//   },
-//   {
-//     id: 3,
-//     name: "Philly Cheesesteak",
-//     description: "A delicious philly cheesesteak",
-//     price: "6.99"
-//   },
-//   {
-//     id: 4,
-//     name: "Philly Chicken",
-//     description: "A delicious Philly Chicken",
-//     price: "6.99"
-//   },
-//   {
-//     id: 5,
-//     name: "Salad",
-//     description: "A good salad",
-//     price: "5.69"
-//   },
-//   {
-//     id: 6,
-//     name: "Chicken",
-//     description: "Good chicken",
-//     price: "3.29"
-//   },
-//   {
-//     id: 7,
-//     name: "chicken nuggets",
-//     description: "delicious chicken nuggets",
-//     price: "3.99"
-//   }
-// ]

@@ -111,13 +111,18 @@ select {
     text-align-last:center; 
 }
 
-input[type=submit] {
+.menu input[type=submit], #save {
     width: 50%;
     padding: 10px 0;
     background: lighten(green, 10);
     color: white;
     margin: auto auto;
     margin-top: 2.5%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    &:active {
+        background: lighten(green, 15)
+    }
 }
 
 .messages input{
@@ -148,11 +153,33 @@ flex-grow: 1;
     width: 20%;
 }
 
-button {
+.messages button {
     color: red;
     background: transparent;
     border: none;
+    padding: 5px 10px;
+    cursor: -webkit-grab;
+    border-radius: 5px;
+    transition: 0.3s all;
+    &:active {
+        cursor: -webkit-grabbing;
+    }
+    &:hover {
+        background: lighten(red, 15);
+        color: white;
+    }
     .svg-inline--fa {
         font-size: 1.2rem;
     }
+}
+
+.updateChanges {
+    display: flex;
+    justify-content: center;
+}
+
+#save {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
