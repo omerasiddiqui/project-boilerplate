@@ -38,7 +38,7 @@ app.init = () => {
         }
         // This is where we add the messages to firebase;
         app.menu.push(message);
-        
+
         // Empty input fields
         $('#nameInput').val("");
         $('#priceInput').val("");
@@ -54,15 +54,18 @@ app.init = () => {
         const description = data.description;
         const key = messages.key;
         const li = `<li class="full" id="key-${key}">
-                    <div class='quarter'>
-                        <strong>${comboNum}</strong>
-                        <p>$${price}</p>
+                    <div class="inputField">
+                            <input type='text' id='nameInput' value='${comboNum}'>
                     </div>
-                    <div class='quarter'>
-                        <p>${name}</p>
+                    <div class="inputField">
+                            <input type='text' id='nameInput' value='${price}'>
                     </div>
-                    <div class='quarter'>
-                        <p class="desc">${description}</p>
+                    <div class="inputField">
+                            <input type='text' id='nameInput' value='${name}'>
+                    </div>
+                    </div>
+                    <div class="inputField">
+                            <input type='text' id='nameInput' value='${name}'>
                     </div>
                     <div class='quarter'>
                         <button class="delete" id="${key}"><i class="fas fa-times-circle"></i></button>
@@ -132,4 +135,3 @@ $(function() {
 //     price: "3.99"
 //   }
 // ]
-
