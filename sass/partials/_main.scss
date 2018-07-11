@@ -23,6 +23,7 @@ h1 {
     width: 100%;
     padding: 0;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 .messages li {
@@ -32,7 +33,6 @@ h1 {
     list-style: none;
     text-align: center;
     border: 1px solid lightgrey;
-    padding: 2%;
 }
 
 .full {
@@ -43,10 +43,22 @@ h1 {
     display: flex;
     width: 25%;
     font-size: 0.7rem;
+    justify-content: center;
 
 }
 
-.quarter:nth-of-type(2) {
+.listHeader  {
+    display: flex;
+    margin-top: 0;
+    padding-top: 0;
+    div {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+    }
+    p {
+        text-align: center;
+    }
 }
 
 .messagesWrap {
@@ -101,6 +113,39 @@ input[type=submit] {
     margin-top: 2.5%;
 }
 
-li * {
-    margin: 0 20px;
+.messages input{
+    width: 75px;
+    font-size: 0.75rem;
+    padding: 0;
+}
+
+.listInputFields {
+width: 100%;
+flex-grow: 1;
+    &:nth-of-type(1) {
+        width: 20px;
+    }
+}
+
+.messages {
+    .inputField:nth-of-type(1) {
+        width: 15%;
+    }
+    .inputField:nth-of-type(3) {
+        width: 25%;
+    }
+}
+
+
+#listNumberInput {
+    width: 20%;
+}
+
+button {
+    color: red;
+    background: transparent;
+    border: none;
+    .svg-inline--fa {
+        font-size: 1.2rem;
+    }
 }

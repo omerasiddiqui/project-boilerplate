@@ -55,24 +55,23 @@ app.init = () => {
         const key = messages.key;
         const li = `<li class="full" id="key-${key}">
                     <div class="inputField">
-                            <input type='text' id='nameInput' value='${comboNum}'>
+                            <input type='text' class="listInputFields" id='listNumberInput' value='${comboNum}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' id='nameInput' value='${price}'>
+                            <input type='text' class="listInputFields" id='listPriceInput' value='${name}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' id='nameInput' value='${name}'>
-                    </div>
+                            <input type='text' class="listInputFields" id='listNameInput' value='${price}'>
                     </div>
                     <div class="inputField">
-                            <input type='text' id='nameInput' value='${name}'>
+                            <input type='text' class="listInputFields" id='listDescriptionInput' value='${description}'>
                     </div>
                     <div class='quarter'>
-                        <button class="delete" id="${key}"><i class="fas fa-times-circle"></i></button>
+                        <button class="delete" id="${key}"><i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
                     </li>`;
                     messageList.append(li);
-                    messageList[0].scrollTop = messageList[0].scrollHeight;
     })
 
     $('ul').on('click', '.delete', function() {

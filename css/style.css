@@ -191,7 +191,8 @@ h1 {
   display: flex;
   width: 100%;
   padding: 0;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 0; }
 
 .messages li {
   display: flex;
@@ -199,8 +200,7 @@ h1 {
   align-items: center;
   list-style: none;
   text-align: center;
-  border: 1px solid lightgrey;
-  padding: 2%; }
+  border: 1px solid lightgrey; }
 
 .full {
   width: 100%; }
@@ -208,7 +208,19 @@ h1 {
 .quarter {
   display: flex;
   width: 25%;
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+  justify-content: center; }
+
+.listHeader {
+  display: flex;
+  margin-top: 0;
+  padding-top: 0; }
+  .listHeader div {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center; }
+  .listHeader p {
+    text-align: center; }
 
 .messagesWrap {
   margin-top: 5%;
@@ -253,5 +265,29 @@ input[type=submit] {
   margin: auto auto;
   margin-top: 2.5%; }
 
-li * {
-  margin: 0 20px; }
+.messages input {
+  width: 75px;
+  font-size: 0.75rem;
+  padding: 0; }
+
+.listInputFields {
+  width: 100%;
+  flex-grow: 1; }
+  .listInputFields:nth-of-type(1) {
+    width: 20px; }
+
+.messages .inputField:nth-of-type(1) {
+  width: 15%; }
+
+.messages .inputField:nth-of-type(3) {
+  width: 25%; }
+
+#listNumberInput {
+  width: 20%; }
+
+button {
+  color: red;
+  background: transparent;
+  border: none; }
+  button .svg-inline--fa {
+    font-size: 1.2rem; }
