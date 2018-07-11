@@ -22,6 +22,7 @@ app.init = () => {
     const priceInput = $('#priceInput');
     const nameInput = $('#nameInput');
     const descriptionInput = $('#descriptionInput');
+    const categoryInput = $('#categoryInput');
 
 
     $('.menu').on("submit", function(e) {
@@ -30,11 +31,13 @@ app.init = () => {
         const price = priceInput.val();
         var comboNum = parseInt(numberInput.val());
         const description = descriptionInput.val();
+        const category = categoryInput.val();
         const message = {
             comboNum,
-            name,
             price,
-            description
+            name,
+            description,
+            category
         }
         // This is where we add the messages to firebase;
         app.menu.push(message);
@@ -73,6 +76,8 @@ app.init = () => {
                     </li>`;
                     messageList.append(li);
     })
+
+    
 
     $('ul').on('click', '.delete', function() {
         const id = $(this).attr('id');
